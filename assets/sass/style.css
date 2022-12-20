@@ -1,0 +1,36 @@
+body {
+  background-image: url("../img/whitebg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 97vh;
+  width: 98vw;
+}
+
+li {
+  list-style: none;
+  border: 2px solid rgb(255, 213, 89);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 10px 0 white;
+  margin-left: 5px;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.0666666667);
+}
+
+.number {
+  border: 2px solid rgb(255, 213, 89);
+  border-radius: 100px;
+  padding: 20px;
+  padding-left: 25px;
+  font-size: larger;
+  font-weight: bold;
+  margin-left: 40px;
+  box-shadow: 0 8px 10px 0 white;
+  width: 70px;
+  height: 70px;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background: rgba(255, 255, 255, 0.0666666667);
+}/*# sourceMappingURL=style.css.map */
