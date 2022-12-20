@@ -1,34 +1,74 @@
+@mixin choices() {
+    border: 2px solid rgba(255, 213, 89, 1);
+    padding: 40px;
+    // box-shadow: 0 8px 10px 0 orange;
+    backdrop-filter: blur(40px);
+    background: #fff1;
+    color: white;
+    // font-family: Courier New, monospace;
+    // font-weight: bold;
+  }
+$radius:20px;
+
+
 body {
-    background-image: url("../img/whitebg.jpg");
+    background-image: url("../img/darkbg.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 97vh;
     width: 98vw;
+    margin-top: -60px;
 }
-li{
-    list-style: none;
-    border: 2px solid rgba(255, 213, 89, 1);
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 8px 10px 0 white;
-    margin-left: 5px;
-    backdrop-filter: blur(40px);
-    background: #fff1;
+.choices{
+    margin-left: 50px;
 }
+
+.choice4{
+    @include choices();
+    border-radius: 0 0 200px $radius;
+}
+.choice3{
+    @include choices();
+    border-radius: $radius 200px 0 0;
+}
+.choice2{
+    @include choices();
+    border-radius: 0 0 $radius 200px;
+    // clip-path: polygon(100% 0, 100% 99%, 23% 100%, 20% 77%, 18% 66%, 15% 60%, 11% 54%, 6% 50%, 0 47%, 0 0);
+}
+.choice1{
+    @include choices();
+    border-radius: 200px $radius 0 0;
+}
+
 
 
 .number{
     border: 2px solid rgba(255, 213, 89, 1);
-    border-radius: 100px;
+    border-radius: 10px;
     padding: 20px;
-    padding-left: 25px;
+    padding-left: 22px;
+    padding-top: 110px;
     font-size: larger;
     font-weight: bold;
-    margin-left: 40px;
-    box-shadow: 0 8px 10px 0 white;
+    font-family: Helvetica, sans-serif;
+    font-size: xx-large;
+    // box-shadow: 0 8px 10px 0 white;
     width: 70px;
-    height: 70px;
+    height: 264px;
     backdrop-filter: blur(50px);
     background: #fff1;
+    color: white;
+}
+
+.qst{
+    // margin-top: -170px;
+    margin-bottom: 70px;
+    @include choices();
+    // color: red;
+    background-color: rgba(29, 30, 32, 1);
+    color: white;
+    border-radius: 20Px;
+    box-shadow: 0 8px 10px 0 orange;
 }

@@ -1,36 +1,85 @@
 body {
-  background-image: url("../img/whitebg.jpg");
+  background-image: url("../img/darkbg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   height: 97vh;
   width: 98vw;
+  margin-top: -60px;
 }
 
-li {
-  list-style: none;
+.choices {
+  margin-left: 50px;
+}
+
+.choice4 {
   border: 2px solid rgb(255, 213, 89);
-  border-radius: 20px;
   padding: 40px;
-  box-shadow: 0 8px 10px 0 white;
-  margin-left: 5px;
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
   background: rgba(255, 255, 255, 0.0666666667);
+  color: white;
+  border-radius: 0 0 200px 20px;
+}
+
+.choice3 {
+  border: 2px solid rgb(255, 213, 89);
+  padding: 40px;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.0666666667);
+  color: white;
+  border-radius: 20px 200px 0 0;
+}
+
+.choice2 {
+  border: 2px solid rgb(255, 213, 89);
+  padding: 40px;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.0666666667);
+  color: white;
+  border-radius: 0 0 20px 200px;
+}
+
+.choice1 {
+  border: 2px solid rgb(255, 213, 89);
+  padding: 40px;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.0666666667);
+  color: white;
+  border-radius: 200px 20px 0 0;
 }
 
 .number {
   border: 2px solid rgb(255, 213, 89);
-  border-radius: 100px;
+  border-radius: 10px;
   padding: 20px;
-  padding-left: 25px;
+  padding-left: 22px;
+  padding-top: 110px;
   font-size: larger;
   font-weight: bold;
-  margin-left: 40px;
-  box-shadow: 0 8px 10px 0 white;
+  font-family: Helvetica, sans-serif;
+  font-size: xx-large;
   width: 70px;
-  height: 70px;
+  height: 264px;
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
   background: rgba(255, 255, 255, 0.0666666667);
+  color: white;
+}
+
+.qst {
+  margin-bottom: 70px;
+  border: 2px solid rgb(255, 213, 89);
+  padding: 40px;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.0666666667);
+  color: white;
+  background-color: rgb(29, 30, 32);
+  color: white;
+  border-radius: 20Px;
+  box-shadow: 0 8px 10px 0 orange;
 }/*# sourceMappingURL=style.css.map */
