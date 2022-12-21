@@ -1,4 +1,4 @@
-body {
+.quizbody {
   background-image: url("../img/darkbg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -53,7 +53,7 @@ body {
 }
 
 .number {
-  border: 2px solid rgb(255, 213, 89);
+  border: 2px solid #F8991C;
   border-radius: 10px;
   padding: 20px;
   padding-left: 22px;
@@ -81,5 +81,35 @@ body {
   background-color: rgb(29, 30, 32);
   color: white;
   border-radius: 20Px;
-  box-shadow: 0 8px 10px 0 orange;
+  box-shadow: 0 8px 10px 0 #F8991C;
+}
+
+.progress {
+  background-color: #F8991C;
+  height: 17rem;
+  left: 5.6%;
+  position: absolute;
+  top: 43%;
+  transform: translateY(-50%);
+  transition: 0.4s ease;
+  width: 0.3%;
+  z-index: -1;
+}
+
+.step {
+  margin-top: 30px;
+  align-items: center;
+  background-color: rgb(29, 30, 32);
+  border: 3px solid #F8991C;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  transition: 0.4s ease;
+  width: 3rem;
+}
+
+.step.active {
+  background-color: #F8991C;
 }/*# sourceMappingURL=style.css.map */
