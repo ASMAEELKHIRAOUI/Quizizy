@@ -11,37 +11,48 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="../assets/sass/style.css"/>
     <link rel="stylesheet" href="https://parsleyjs.org/src/parsley.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <title>Quizizy</title>
 </head>
-<body class="quizbody">
-    <div class="row-lg h-100 d-flex align-items-center p-5 flex-wrap">
-        <div class="steps col-lg-1">
-            <div class="d-flex mb-5">
-                <div class="progress" id="progress"></div>
-                <div class="step active">
-                    <i class="bi bi-info"></i>
+<body>
+    <nav class="navbar navbar-expand-lg mb-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../assets/img/logo.png" alt="Quizizy" style="height: 70px; width: 90px;"></a>
+            <div class="steps d-flex">
+                <div class="ms-5">
+                    <div class="progress" id="progress"></div>
+                    <div class="step active">
+                        <i class="bi bi-info"></i>
+                    </div>
                 </div>
-                <!-- <div class="">
-                    Informations
-                </div> -->
-            </div>
-            <div class="d-flex my-5">
-                <div class="step">
-                    <i class="bi bi-question-lg"></i>
+                <div class="ms-5">
+                    <div class="step">
+                        <i class="bi bi-question-lg"></i>
+                    </div>
                 </div>
-                <!-- <div class="">
-                    Questionnaire
-                </div> -->
-            </div>
-            <div class="d-flex mt-5">
-                <div class="step">
-                    <i class="bi bi-boxes"></i>
+                <div class="ms-5">
+                    <div class="step">
+                        <i class="bi bi-boxes"></i>
+                    </div>
                 </div>
-                <!-- <div class="">
-                    Result
-                </div> -->
             </div>
+            <div class="d-flex justify-content-end" id="navbarSupportedContent"><a class="btn" href="#">High Score</a></div>
         </div>
+    </nav>
+<div id="home" class="home">
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <h2 class="welcome">Welcome to Quizizy</h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat in quam sit amet vulputate. Donec non lectus consequat, vulputate justo et, pellentesque dui. Proin odio nulla, lobortis tempus lacinia non, blandit in neque. Suspendisse a efficitur risus, finibus iaculis neque. Pellentesque iaculis felis quis sapien malesuada maximus. Pellentesque ornare nibh fermentum auctor suscipit.
+        </p>
+        <div class="d-flex justify-content-end">
+            <button class="btn start" id="start" href="index.php">Start the Quiz <i class="bi bi-arrow-bar-right"></i></button>
+        </div>
+    </div>
+</div>
+<div id="quiz" >
+    <div class=" quiz row-lg h-100 d-flex align-items-center p-5 flex-wrap">
+        <div class="col-lg-1"></div>
         <div class="col-lg-10">
             <div class="qst d-flex justify-content-center">
                 Why is AWS more economical than traditional data centers for applications with varying compute
@@ -49,30 +60,39 @@
             </div>
             <div class="choices row-lg h-100 d-flex align-items-center p-5 flex-wrap">
                 <div class="col-lg-5">
-                    <div class="choice1">
+                    <button class="choice1">
                         Amazon EC1 costs are billed on a monthly basis 
-                    </div>
-                    <div class="choice2">
+                    </button>
+                    <button class="choice2">
                         Amazon EC2 costs are billed on a monthly basis 
-                    </div>
+                    </button>
                 </div>
                 <div class="number col-lg-2">
                     1
                 </div>
                 <div class="col-lg-5">
-                    <div class="choice3">
+                    <button class="choice3">
                         Amazon EC3 costs are billed on a monthly basis 
-                    </div>
-                    <div class="choice4">
+                    </button>
+                    <button class="choice4">
                         Amazon EC4 costs are billed on a monthly basis 
-                    </div>
+                    </button>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-1 text-light">
-            <button class="btn" id="prev" disabled>Prev</button><button class="btn" id="next">Next</button>
+            <div class="sumbit d-flex justify-content-end  "><button class="btn p-3">Submit</button></div>
+            
         </div>
     </div>
-    <script src="../assets/scripts/stepper.js"></script>
+</div>
+<script src="../assets/scripts/stepper.js"></script>
+<script>
+    document.querySelector('#quiz').style.display = 'none';
+
+    document.querySelector('#start').addEventListener('click', function() {
+        document.querySelector('#quiz').style.display = 'block';
+        document.querySelector('#home').style.display = 'none';
+    });
+
+</script>
 </body>
 </html>

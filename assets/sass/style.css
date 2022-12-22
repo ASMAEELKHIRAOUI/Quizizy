@@ -1,5 +1,4 @@
-.quizbody {
-  background-image: url("../img/darkbg.jpg");
+.quiz {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -8,12 +7,17 @@
   margin-top: -60px;
 }
 
+body {
+  background-color: black;
+  color: white;
+}
+
 .choices {
   margin-left: 50px;
 }
 
 .choice4 {
-  border: 2px solid rgb(255, 213, 89);
+  border: 2px solid #F8991C;
   padding: 40px;
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
@@ -21,9 +25,16 @@
   color: white;
   border-radius: 0 0 200px 20px;
 }
+.choice4:hover {
+  box-shadow: black;
+  background-color: rgba(248, 153, 28, 0.49);
+}
+.choice4:active {
+  background-color: #F8991C;
+}
 
 .choice3 {
-  border: 2px solid rgb(255, 213, 89);
+  border: 2px solid #F8991C;
   padding: 40px;
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
@@ -31,9 +42,16 @@
   color: white;
   border-radius: 20px 200px 0 0;
 }
+.choice3:hover {
+  box-shadow: black;
+  background-color: rgba(248, 153, 28, 0.49);
+}
+.choice3:active {
+  background-color: #F8991C;
+}
 
 .choice2 {
-  border: 2px solid rgb(255, 213, 89);
+  border: 2px solid #F8991C;
   padding: 40px;
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
@@ -41,15 +59,29 @@
   color: white;
   border-radius: 0 0 20px 200px;
 }
+.choice2:hover {
+  box-shadow: black;
+  background-color: rgba(248, 153, 28, 0.49);
+}
+.choice2:active {
+  background-color: #F8991C;
+}
 
 .choice1 {
-  border: 2px solid rgb(255, 213, 89);
+  border: 2px solid #F8991C;
   padding: 40px;
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
   background: rgba(255, 255, 255, 0.0666666667);
   color: white;
   border-radius: 200px 20px 0 0;
+}
+.choice1:hover {
+  box-shadow: black;
+  background-color: rgba(248, 153, 28, 0.49);
+}
+.choice1:active {
+  background-color: #F8991C;
 }
 
 .number {
@@ -67,18 +99,14 @@
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
   background: rgba(255, 255, 255, 0.0666666667);
-  color: white;
 }
 
 .qst {
-  margin-bottom: 70px;
-  border: 2px solid rgb(255, 213, 89);
+  border: 2px solid #F8991C;
   padding: 40px;
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
   background: rgba(255, 255, 255, 0.0666666667);
-  color: white;
-  background-color: rgb(29, 30, 32);
   color: white;
   border-radius: 20Px;
   box-shadow: 0 8px 10px 0 #F8991C;
@@ -86,13 +114,13 @@
 
 .progress {
   background-color: #F8991C;
-  height: 17rem;
-  left: 5.6%;
+  height: 0.4rem;
+  left: 45%;
   position: absolute;
-  top: 43%;
+  top: 65%;
   transform: translateY(-50%);
   transition: 0.4s ease;
-  width: 0.3%;
+  width: 0;
   z-index: -1;
 }
 
@@ -112,4 +140,22 @@
 
 .step.active {
   background-color: #F8991C;
+}
+
+.btn {
+  color: #F8991C;
+  border: 2px solid #F8991C;
+  font-weight: 500;
+}
+.btn:hover {
+  background-color: #F8991C;
+  color: white;
+}
+
+.welcome {
+  color: #F8991C;
+}
+
+.sumbit {
+  margin-top: -60px;
 }/*# sourceMappingURL=style.css.map */

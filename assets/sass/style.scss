@@ -1,18 +1,25 @@
+$radius:20px;
+$amazon:#F8991C;
+
 @mixin choices() {
-    border: 2px solid rgba(255, 213, 89, 1);
+    border: 2px solid $amazon;
     padding: 40px;
-    // box-shadow: 0 8px 10px 0 orange;
     backdrop-filter: blur(40px);
     background: #fff1;
     color: white;
-    // font-family: Courier New, monospace;
-    // font-weight: bold;
   }
-$radius:20px;
+@mixin hover(){
+    &:hover{
+        box-shadow: black;
+        background-color: rgba(248, 153, 28, 0.49);
+    }
+    &:active{
+        background-color: $amazon;
+    }
+}
 
 
-.quizbody{
-    background-image: url("../img/darkbg.jpg");
+.quiz{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -20,32 +27,39 @@ $radius:20px;
     width: 98vw;
     margin-top: -60px;
 }
+
+body{
+    background-color: black;
+    color: white;
+}
+
 .choices{
     margin-left: 50px;
 }
 
 .choice4{
     @include choices();
+    @include hover();
     border-radius: 0 0 200px $radius;
 }
 .choice3{
     @include choices();
+    @include hover();
     border-radius: $radius 200px 0 0;
 }
 .choice2{
     @include choices();
+    @include hover();
     border-radius: 0 0 $radius 200px;
-    // clip-path: polygon(100% 0, 100% 99%, 23% 100%, 20% 77%, 18% 66%, 15% 60%, 11% 54%, 6% 50%, 0 47%, 0 0);
 }
 .choice1{
     @include choices();
+    @include hover();
     border-radius: 200px $radius 0 0;
 }
 
-
-
 .number{
-    border: 2px solid #F8991C;
+    border: 2px solid $amazon;
     border-radius: 10px;
     padding: 20px;
     padding-left: 22px;
@@ -54,45 +68,33 @@ $radius:20px;
     font-weight: bold;
     font-family: Helvetica, sans-serif;
     font-size: xx-large;
-    // box-shadow: 0 8px 10px 0 white;
     width: 70px;
     height: 264px;
     backdrop-filter: blur(50px);
     background: #fff1;
-    color: white;
 }
 
 .qst{
-    // margin-top: -170px;
-    margin-bottom: 70px;
     @include choices();
-    // color: red;
-    background-color: rgba(29, 30, 32, 1);
-    color: white;
     border-radius: 20Px;
-    box-shadow: 0 8px 10px 0 #F8991C;
+    box-shadow: 0 8px 10px 0 $amazon;
 }
-// .steps{
-//         border-left: 1px solid white; /* Add a border to the top of the element */
-//         width: 10%; /* Set the width to 100% to fill the entire container */
-//         height: 30%; 
-// }
 .progress {
-    background-color: #F8991C;
-    height: 17rem;
-    left: 5.6%;
+    background-color: $amazon;
+    height: 0.4rem;
+    left: 45%;
     position: absolute;
-    top: 43%;
+    top: 65%;
     transform: translateY(-50%);
     transition: 0.4s ease;
-    width: 0.3%;
+    width: 0;
     z-index: -1;
 }
 .step{
     margin-top: 30px;
     align-items: center;
     background-color: rgba(29, 30, 32, 1);
-    border: 3px solid #F8991C;
+    border: 3px solid $amazon;
     border-radius: 50%;
     color: white;
     display: flex;
@@ -102,5 +104,20 @@ $radius:20px;
     width: 3rem;
 }
 .step.active {
-    background-color: #F8991C;
+    background-color: $amazon;
+}
+.btn{
+    color: #F8991C;
+    border: 2px solid $amazon;
+    font-weight: 500;
+    &:hover{
+        background-color: $amazon;
+        color: white;
+    }
+}
+.welcome{
+    color: $amazon;
+}
+.sumbit{
+    margin-top: -60px;
 }
