@@ -55,6 +55,7 @@
         <div class="col-lg-1"></div>
         <div class="col-lg-10">
             <div class="qst d-flex justify-content-center" id="qst"></div>
+            <div class="progressbar" id="progressbar"></div>
             <div class="choices row-lg h-100 d-flex align-items-center p-5 flex-wrap">
                 <div class="col-lg-3">
                     <button class="choice1" id="choice1" onclick="answerSubmit('1');"></button>

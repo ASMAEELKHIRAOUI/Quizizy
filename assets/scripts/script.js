@@ -6,16 +6,16 @@ let choice1 = document.getElementById("choice1");
 let choice2 = document.getElementById("choice2");
 let choice3 = document.getElementById("choice3");
 let choice4 = document.getElementById("choice4");
-// let number = document.getElementById("number");
 let submit = document.getElementById('submit');
-// let submit = document.getElementById("start");
 
-submit.addEventListener('click', nextQst);
-next.addEventListener("click",function (){
+next.addEventListener("click",function() {
   counter();
-  displayQst(); 
+  nextQst(); 
 });
-// next.addEventListener('click',[nextQst , counter]);
+submit.addEventListener('click', function(){
+  nextQst();
+  progressupdate();
+});
 
 
 let qsts = [
@@ -109,25 +109,16 @@ function displayQst(qstIndex){
   choice2.innerHTML = qsts[qstIndex].choice2;
   choice3.innerHTML = qsts[qstIndex].choice3;
   choice4.innerHTML = qsts[qstIndex].choice4;
-  // number.innerHTML = qstIndex + 1;
 }
 
-submit.addEventListener('click', displayQst);
-// console.log(submit.addEventListener('click', nextQst));
-next.addEventListener('click', nextQst);
-
-
-// console.log(qstIndex);
 
 function nextQst(){
   if(qstIndex < qsts.length){
     displayQst(qstIndex);
     qstIndex++;
+    progressupdate(qstIndex);
     // showProgress();
   }
-  // for(qstIndex=0 ; qstIndex < qsts.length - 1 ; qstIndex++){
-  //   displayQst(qstIndex);
-  // }
 }
 function answerSubmit(answer){
   if(answer == qsts[qstIndex].correct){
@@ -137,11 +128,6 @@ function answerSubmit(answer){
   else{
     choice = "wrong";
   }}
-
-//   // nextQst();
-//   // console.log(score);
-//   console.log(choice);
-// }
 
 
 function update() {
@@ -163,4 +149,11 @@ function counter(){
   update();
 }
 
-// next.addEventListener("click",[nextQst , counter]);
+function progressupdate(qstIndex){
+  for (let i = 0; i<qsts.length; i++) {
+    if (i < qstIndex) { //checks whether the current case of the loop represents a step that has already been completed
+      progresswidth = i * 8;
+      progressbar.style.width = progresswidth + "%";
+    }
+  };
+}
