@@ -23,7 +23,9 @@ body {
           backdrop-filter: blur(40px);
   background: rgba(255, 255, 255, 0.0666666667);
   color: white;
-  border-radius: 0 0 200px 20px;
+  border-radius: 20px;
+  height: 200px;
+  width: 190px;
 }
 .choice4:hover {
   box-shadow: black;
@@ -40,7 +42,9 @@ body {
           backdrop-filter: blur(40px);
   background: rgba(255, 255, 255, 0.0666666667);
   color: white;
-  border-radius: 20px 200px 0 0;
+  border-radius: 20px;
+  height: 200px;
+  width: 190px;
 }
 .choice3:hover {
   box-shadow: black;
@@ -57,7 +61,9 @@ body {
           backdrop-filter: blur(40px);
   background: rgba(255, 255, 255, 0.0666666667);
   color: white;
-  border-radius: 0 0 20px 200px;
+  border-radius: 20px;
+  height: 200px;
+  width: 190px;
 }
 .choice2:hover {
   box-shadow: black;
@@ -74,7 +80,9 @@ body {
           backdrop-filter: blur(40px);
   background: rgba(255, 255, 255, 0.0666666667);
   color: white;
-  border-radius: 200px 20px 0 0;
+  border-radius: 20px;
+  height: 200px;
+  width: 190px;
 }
 .choice1:hover {
   box-shadow: black;
@@ -108,7 +116,7 @@ body {
           backdrop-filter: blur(40px);
   background: rgba(255, 255, 255, 0.0666666667);
   color: white;
-  border-radius: 20Px;
+  border-radius: 20px;
   box-shadow: 0 8px 10px 0 #F8991C;
 }
 
@@ -157,5 +165,5 @@ body {
 }
 
 .sumbit {
-  margin-top: -60px;
+  margin-top: -20px;
 }/*# sourceMappingURL=style.css.map */
