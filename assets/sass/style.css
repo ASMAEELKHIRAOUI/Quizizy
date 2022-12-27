@@ -62,7 +62,7 @@ body {
 
 .progressbar {
   background-color: #F8991C;
-  height: 0.8rem;
+  height: 1.5rem;
   position: absolute;
   top: 35%;
   transform: translateY(-50%);
@@ -70,6 +70,10 @@ body {
   width: 0;
   z-index: -1;
   border-radius: 20px;
+}
+
+.progresscounter {
+  left: 0;
 }
 
 .step {

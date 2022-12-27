@@ -12,6 +12,7 @@ let home = document.getElementById('home');
 let results = document.getElementById('results');
 let currentscore = document.getElementById('score');
 let highscore = document.getElementById('high-score');
+let progresscounter = document.getElementById('progresscounter');
 
 quiz.style.display = 'none';
 results.style.display = 'none';
@@ -23,10 +24,7 @@ start.addEventListener('click', function() {
 });
 
 for (let i = 0; i < submit.length; i++) {
-  submit[i].addEventListener('click',function() {
-    nextQst();
-    progressupdate();
-  });
+  submit[i].addEventListener('click',nextQst);
 }
 
 start.addEventListener("click",function() {
@@ -130,7 +128,6 @@ let qsts = [
 let qstIndex = 0;
 
 randomize(qsts);
-console.log(qsts);
 
 function displayQst(qstIndex){
   qst.innerHTML = qsts[qstIndex].qst;
@@ -143,13 +140,14 @@ function displayQst(qstIndex){
 
 function nextQst(){
   if(qstIndex < qsts.length){
+    console.log(qstIndex);
     displayQst(qstIndex);
     progressupdate(qstIndex);
   }
   else{
-    document.querySelector('#quiz').style.display = 'none';
-    document.querySelector('#home').style.display = 'none';
-    document.querySelector('#results').style.display = 'block';
+    quiz.style.display = 'none';
+    home.style.display = 'none';
+    results.style.display = 'block';
     stepper();
     currentscore.innerHTML = score*10 + '%';
     answers();
@@ -162,9 +160,10 @@ function answerSubmit(answer){
   if(answer == qsts[qstIndex].correct){
     score++;
     choice = "correct";
+
     let correctAnswer = {
       qst: qsts[qstIndex].qst,
-      correctAnswer: qsts[qstIndex].correct,
+      correctAnswer: qsts[qstIndex]["choice"+qsts[qstIndex].correct],
       explanation: qsts[qstIndex].explanation,
     };
     correctAnswers.push(correctAnswer);
@@ -173,7 +172,7 @@ function answerSubmit(answer){
     choice = "incorrect";
     let incorrectAnswer = {
       qst: qsts[qstIndex].qst,
-      correctAnswer: qsts[qstIndex].correct,
+      correctAnswer: qsts[qstIndex]["choice"+qsts[qstIndex].correct],
       explanation: qsts[qstIndex].explanation,
     };
     incorrectAnswers.push(incorrectAnswer);
@@ -214,9 +213,11 @@ function stepper(){
 
 function progressupdate(qstIndex){
   for (let i = 0; i<qsts.length; i++) {
-    if (i < qstIndex) { //checks whether the current index of the loop represents a step that has already been completed
-      progresswidth = i * 8;
+    if (i < qstIndex+1) { //checks whether the current index of the loop represents a step that has already been completed
+      let progresswidth = (i+1) * 7;
       progressbar.style.width = progresswidth + "%";
+      progresscounter.innerHTML = i+1 + '/10';
+      progresscounter.style.left = progresswidth + "%";
     }
   };
 }

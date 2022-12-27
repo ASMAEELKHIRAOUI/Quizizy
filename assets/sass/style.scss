@@ -39,50 +39,12 @@ body{
     color: white;
 }
 
-// .choices{
-//     // margin-left: 50px;
-// }
-
 .choice{
     @include choices();
     @include hover();
-    // border-radius: 0 0 200px $radius;
 }
-// .choice3{
-//     @include choices();
-//     @include hover();
-//     // border-radius: $radius 200px 0 0;
-// }
-// .choice2{
-//     @include choices();
-//     @include hover();
-//     // border-radius: 0 0 $radius 200px;
-// }
-// .choice1{
-//     @include choices();
-//     @include hover();
-//     // border-radius: 200px $radius 0 0;
-// }
-
-// .number{
-//     border: 2px solid $amazon;
-//     border-radius: 10px;
-//     padding: 20px;
-//     padding-left: 22px;
-//     padding-top: 110px;
-//     font-size: larger;
-//     font-weight: bold;
-//     font-family: Helvetica, sans-serif;
-//     font-size: xx-large;
-//     width: 70px;
-//     height: 264px;
-//     backdrop-filter: blur(50px);
-//     background: #fff1;
-// }
-
 .qst{
     @include choices();
-    // border-radius: 20Px;
     box-shadow: 0 8px 10px 0 $amazon;
 }
 .progress {
@@ -98,8 +60,8 @@ body{
 }
 .progressbar {
     background-color: $amazon;
-    height: 0.8rem;
-    // left: 45%;
+    height: 1.5rem;
+    // left: 10%;
     position: absolute;
     top: 35%;
     transform: translateY(-50%);
@@ -107,6 +69,10 @@ body{
     width: 0;
     z-index: -1;
     border-radius: $radius;
+}
+
+.progresscounter{
+    left: 0;
 }
 .step{
     margin-top: 30px;
@@ -142,9 +108,6 @@ body{
 .welcome{
     color: $amazon;
 }
-// .sumbit{
-//     margin-top: -20px;
-// }
 
 ::-webkit-scrollbar {
     width: 4px;
@@ -161,7 +124,3 @@ body{
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
-// .cards{
-//     border: solid 1px red;
-//     color: red;
-// }
