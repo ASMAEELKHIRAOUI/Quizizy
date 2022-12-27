@@ -12,7 +12,7 @@ body {
   color: white;
 }
 
-.choice4 {
+.choice {
   border: 2px solid #F8991C;
   padding: 20px;
   -webkit-backdrop-filter: blur(40px);
@@ -23,68 +23,14 @@ body {
   height: 200px;
   width: 200px;
 }
-.choice4:hover {
-  box-shadow: black;
-  background-color: rgba(248, 153, 28, 0.49);
-}
-.choice4:active {
+.choice .active {
   background-color: #F8991C;
 }
-
-.choice3 {
-  border: 2px solid #F8991C;
-  padding: 20px;
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
-  background: rgba(255, 255, 255, 0.0666666667);
-  color: white;
-  border-radius: 20px;
-  height: 200px;
-  width: 200px;
-}
-.choice3:hover {
+.choice:hover {
   box-shadow: black;
   background-color: rgba(248, 153, 28, 0.49);
 }
-.choice3:active {
-  background-color: #F8991C;
-}
-
-.choice2 {
-  border: 2px solid #F8991C;
-  padding: 20px;
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
-  background: rgba(255, 255, 255, 0.0666666667);
-  color: white;
-  border-radius: 20px;
-  height: 200px;
-  width: 200px;
-}
-.choice2:hover {
-  box-shadow: black;
-  background-color: rgba(248, 153, 28, 0.49);
-}
-.choice2:active {
-  background-color: #F8991C;
-}
-
-.choice1 {
-  border: 2px solid #F8991C;
-  padding: 20px;
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
-  background: rgba(255, 255, 255, 0.0666666667);
-  color: white;
-  border-radius: 20px;
-  height: 200px;
-  width: 200px;
-}
-.choice1:hover {
-  box-shadow: black;
-  background-color: rgba(248, 153, 28, 0.49);
-}
-.choice1:active {
+.choice:active {
   background-color: #F8991C;
 }
 
@@ -98,13 +44,16 @@ body {
   border-radius: 20px;
   box-shadow: 0 8px 10px 0 #F8991C;
 }
+.qst .active {
+  background-color: #F8991C;
+}
 
 .progress {
   background-color: #F8991C;
   height: 0.4rem;
-  left: 45%;
+  left: 30%;
   position: absolute;
-  top: 65%;
+  top: 70%;
   transform: translateY(-50%);
   transition: 0.4s ease;
   width: 0;
@@ -136,7 +85,6 @@ body {
   transition: 0.4s ease;
   width: 3rem;
 }
-
 .step.active {
   background-color: #F8991C;
 }
@@ -151,10 +99,30 @@ body {
   color: white;
 }
 
+.resultsExplanation {
+  height: 55vh;
+  overflow-y: scroll;
+  border: solid 3px #F8991C;
+  border-radius: 10px;
+}
+
 .welcome {
   color: #F8991C;
 }
 
-.sumbit {
-  margin-top: -20px;
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffc266;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #38475e;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }/*# sourceMappingURL=style.css.map */

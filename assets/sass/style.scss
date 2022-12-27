@@ -8,6 +8,9 @@ $amazon:#F8991C;
     background: #fff1;
     color: white;
     border-radius: 20px;
+    .active{
+        background-color: $amazon;
+    }
   }
 @mixin hover(){
     height: 200px;
@@ -40,26 +43,26 @@ body{
 //     // margin-left: 50px;
 // }
 
-.choice4{
+.choice{
     @include choices();
     @include hover();
     // border-radius: 0 0 200px $radius;
 }
-.choice3{
-    @include choices();
-    @include hover();
-    // border-radius: $radius 200px 0 0;
-}
-.choice2{
-    @include choices();
-    @include hover();
-    // border-radius: 0 0 $radius 200px;
-}
-.choice1{
-    @include choices();
-    @include hover();
-    // border-radius: 200px $radius 0 0;
-}
+// .choice3{
+//     @include choices();
+//     @include hover();
+//     // border-radius: $radius 200px 0 0;
+// }
+// .choice2{
+//     @include choices();
+//     @include hover();
+//     // border-radius: 0 0 $radius 200px;
+// }
+// .choice1{
+//     @include choices();
+//     @include hover();
+//     // border-radius: 200px $radius 0 0;
+// }
 
 // .number{
 //     border: 2px solid $amazon;
@@ -85,9 +88,9 @@ body{
 .progress {
     background-color: $amazon;
     height: 0.4rem;
-    left: 45%;
+    left: 30%;
     position: absolute;
-    top: 65%;
+    top: 70%;
     transform: translateY(-50%);
     transition: 0.4s ease;
     width: 0;
@@ -117,9 +120,9 @@ body{
     justify-content: center;
     transition: 0.4s ease;
     width: 3rem;
-}
-.step.active {
-    background-color: $amazon;
+    &.active {
+        background-color: $amazon;
+    }
 }
 .btn{
     color: #F8991C;
@@ -130,9 +133,35 @@ body{
         color: white;
     }
 }
+.resultsExplanation{
+    height: 55vh;
+    overflow-y: scroll;
+    border: solid 3px $amazon;
+    border-radius: 10px;
+}
 .welcome{
     color: $amazon;
 }
-.sumbit{
-    margin-top: -20px;
-}
+// .sumbit{
+//     margin-top: -20px;
+// }
+
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #ffc266;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #38475e;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+// .cards{
+//     border: solid 1px red;
+//     color: red;
+// }

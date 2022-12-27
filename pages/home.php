@@ -12,23 +12,15 @@
     <title>Quizizy|Home</title>
 </head>
 <body>
-    <!-- <header>
-    <img src="../assets/img/logo.png" alt="Quizizy" style="height: 50px; width: 80px;">
-    </header> -->
-    <!-- <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="../assets/img/logo.png" alt="Quizizy" style="height: 50px; width: 80px;"></a>
             <div class="d-flex justify-content-end" id="navbarSupportedContent"><a class="btn" href="#">High Score</a></div>
         </div>
     </nav>
-    <div class="position-absolute top-50 start-50 translate-middle">
-        <h2 class="welcome">Welcome to Quizizy</h2>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat in quam sit amet vulputate. Donec non lectus consequat, vulputate justo et, pellentesque dui. Proin odio nulla, lobortis tempus lacinia non, blandit in neque. Suspendisse a efficitur risus, finibus iaculis neque. Pellentesque iaculis felis quis sapien malesuada maximus. Pellentesque ornare nibh fermentum auctor suscipit.
-        </p>
-        <div class="d-flex justify-content-end">
-            <a class="btn" href="index.php">Start the Quiz<i class="bi bi-arrow-bar-right"></i></a></button>
-        </div>
-    </div> -->
+    <div class="position-absolute top-50 start-50 translate-middle fs-5 mb-5">
+            <div>Your Score : </div>
+            <div class="ms-2"></div>
+    </div>
 </body>
 </html>

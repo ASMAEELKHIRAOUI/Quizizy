@@ -18,7 +18,7 @@
     <nav class="navbar navbar-expand-lg mb-5">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="../assets/img/logo.png" alt="Quizizy" style="height: 70px; width: 90px;"></a>
-            <div class="steps d-flex">
+            <div class="steps d-flex position-absolute start-50 translate-middle mt-5">
                 <div class="ms-5">
                     <div class="progress" id="progress"></div>
                     <div class="step active">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex justify-content-end" id="navbarSupportedContent"><a class="btn" href="#">High Score</a></div>
+            <!-- <div class="d-flex justify-content-end"></div> -->
         </div>
     </nav>
 <div id="home" class="home">
@@ -46,7 +46,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat in quam sit amet vulputate. Donec non lectus consequat, vulputate justo et, pellentesque dui. Proin odio nulla, lobortis tempus lacinia non, blandit in neque. Suspendisse a efficitur risus, finibus iaculis neque. Pellentesque iaculis felis quis sapien malesuada maximus. Pellentesque ornare nibh fermentum auctor suscipit.
         </p>
         <div class="d-flex justify-content-end">
-            <button class="btn start" id="start" href="index.php">Start the Quiz <i class="bi bi-arrow-bar-right"></i></button>
+            <button class="btn start" id="start">Start the Quiz <i class="bi bi-arrow-bar-right"></i></button>
         </div>
     </div>
 </div>
@@ -58,32 +58,31 @@
             <div class="progressbar" id="progressbar"></div>
             <div class="choices row-lg h-100 d-flex align-items-center p-5 flex-wrap">
                 <div class="col-lg-3">
-                    <button class="choice1" id="choice1" onclick="answerSubmit('1');"></button>
+                    <button class="choice" id="choice1" onclick="answerSubmit('1');"></button>
                 </div>
                 <div class="col-lg-3">
-                    <button class="choice2" id="choice2" onclick="answerSubmit('2');"></button>
+                    <button class="choice" id="choice2" onclick="answerSubmit('2');"></button>
                 </div>
                 <div class="col-lg-3">
-                    <button class="choice3" id="choice3" onclick="answerSubmit('3');"></button>
+                    <button class="choice" id="choice3" onclick="answerSubmit('3');"></button>
                 </div>
                 <div class="col-lg-3">
-                    <button class="choice4" id="choice4" onclick="answerSubmit('4');"></button>
+                    <button class="choice" id="choice4" onclick="answerSubmit('4');"></button>
                 </div>
             </div>
-            <div class="sumbit d-flex justify-content-end" id="submit"><button class="btn p-3">Submit</button></div>
-            
+        </div>
+    </div>
+</div>
+<div id="results">
+    <div class="m-5 fs-5">
+        <div class="d-flex mb-5 justify-content-center">
+            <div>Your Score : </div>
+            <div class="ms-2" id="score"></div>
+        </div>
+        <div class="resultsExplanation p-4">
         </div>
     </div>
 </div>
 <script src="../assets/scripts/script.js"></script>
-<script>
-    document.querySelector('#quiz').style.display = 'none';
-
-    document.querySelector('#start').addEventListener('click', function() {
-        document.querySelector('#quiz').style.display = 'block';
-        document.querySelector('#home').style.display = 'none';
-    });
-
-</script>
 </body>
 </html>
