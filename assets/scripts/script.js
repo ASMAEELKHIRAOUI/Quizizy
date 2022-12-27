@@ -153,7 +153,6 @@ function nextQst(){
     stepper();
     currentscore.innerHTML = score*10 + '%';
     answers();
-    // qsts.forEach(answers());
   }
 }
 let score = 0;
