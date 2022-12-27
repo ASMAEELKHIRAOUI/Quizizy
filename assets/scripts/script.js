@@ -9,19 +9,16 @@ let choice4 = document.getElementById("choice4");
 let submit = document.querySelectorAll('.choice');
 let quiz = document.getElementById('quiz');
 let home = document.getElementById('home');
-// let resultbutton = document.getElementById('result-request');
 let results = document.getElementById('results');
 let currentscore = document.getElementById('score');
 let highscore = document.getElementById('high-score');
 
 quiz.style.display = 'none';
-// resultbutton.style.display = 'none';
 results.style.display = 'none';
 
 start.addEventListener('click', function() {
     quiz.style.display = 'block';
     home.style.display = 'none';
-    // document.querySelector('#result-request').style.display = 'none';
     results.style.display = 'none';
 });
 
@@ -30,14 +27,12 @@ for (let i = 0; i < submit.length; i++) {
     nextQst();
     progressupdate();
   });
-  
 }
 
 start.addEventListener("click",function() {
   stepper();
   nextQst(); 
 });
-
 
 let qsts = [
   {
