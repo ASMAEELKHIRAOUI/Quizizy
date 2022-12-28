@@ -193,12 +193,12 @@ function answers() {
 }
 
 function update() {
-    for (let i = 0; i<steps.length; i++) {
-        let step = steps[i];
-        if (i < current) { //checks whether the current case of the loop represents a step that has already been completed
-          step.classList.add("active");
-        }
-    };
+  for (let i = 0; i<steps.length; i++) {
+    let step = steps[i];
+    if (i < current) { //checks whether the current case of the loop represents a step that has already been completed
+      step.classList.add("active");
+    }
+  };
 
   let actives = document.querySelectorAll(".active");
   let width = (actives.length - 1 / steps.length - 1) * 40;
@@ -214,7 +214,7 @@ function stepper(){
 function progressupdate(qstIndex){
   for (let i = 0; i<qsts.length; i++) {
     if (i < qstIndex+1) { //checks whether the current index of the loop represents a step that has already been completed
-      let progresswidth = (i+1) * 7;
+      let progresswidth = (i+1) * 7.5;
       progressbar.style.width = progresswidth + "%";
       progresscounter.innerHTML = i+1 + '/10';
       progresscounter.style.left = progresswidth + "%";

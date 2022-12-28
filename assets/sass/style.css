@@ -64,16 +64,9 @@ body {
   background-color: #F8991C;
   height: 1.5rem;
   position: absolute;
-  top: 35%;
-  transform: translateY(-50%);
   transition: 0.4s ease;
   width: 0;
-  z-index: -1;
   border-radius: 20px;
-}
-
-.progresscounter {
-  left: 0;
 }
 
 .step {
@@ -129,4 +122,14 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.home {
+  margin-top: 20%;
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    margin-top: 90%;
+  }
 }/*# sourceMappingURL=style.css.map */

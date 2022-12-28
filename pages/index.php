@@ -38,7 +38,7 @@
             <!-- <div class="d-flex justify-content-end"></div> -->
         </div>
     </nav>
-<div id="home" class="home">
+<div id="home" class="home position-relative">
     <div class="position-absolute top-50 start-50 translate-middle">
         <h2 class="welcome">Welcome to Quizizy</h2>
         <p>
@@ -54,21 +54,21 @@
         <div class="col-lg-1"></div>
         <div class="col-lg-10">
             <div class="qst d-flex justify-content-center" id="qst"></div>
-            <div class="progressbar d-flex justify-content-center" id="progressbar">
+            <div class="progressbar d-flex justify-content-center my-4" id="progressbar">
                 <div id="progresscounter" class="progresscounter"></div>
             </div>
             <div class="choices row-lg h-100 d-flex align-items-center p-5 flex-wrap">
                 <div class="col-lg-3">
-                    <button class="choice" id="choice1" onclick="answerSubmit('1');"></button>
+                    <button class="choice my-2" id="choice1" onclick="answerSubmit('1');"></button>
                 </div>
                 <div class="col-lg-3">
-                    <button class="choice" id="choice2" onclick="answerSubmit('2');"></button>
+                    <button class="choice my-2" id="choice2" onclick="answerSubmit('2');"></button>
                 </div>
                 <div class="col-lg-3">
-                    <button class="choice" id="choice3" onclick="answerSubmit('3');"></button>
+                    <button class="choice my-2" id="choice3" onclick="answerSubmit('3');"></button>
                 </div>
                 <div class="col-lg-3">
-                    <button class="choice" id="choice4" onclick="answerSubmit('4');"></button>
+                    <button class="choice my-2" id="choice4" onclick="answerSubmit('4');"></button>
                 </div>
             </div>
         </div>
